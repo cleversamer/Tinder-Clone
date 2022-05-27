@@ -11,11 +11,9 @@ const Header = () => {
         <Person className="header__icon" fontSize="large" />
       </IconButton>
 
-      <img
-        className="header__logo"
-        src="https://tinder.com/favicon-32x32.png"
-        alt="Tinder"
-      />
+      <IconButton>
+        <img className="header__logo" src="/img/logo.png" alt="Tinder" />
+      </IconButton>
 
       <IconButton>
         <Forum className="header__icon" fontSize="large" />
