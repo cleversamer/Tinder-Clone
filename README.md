@@ -1,14 +1,12 @@
 # Tinder 🚀
 
-Simple overview of use/purpose.
-
 ## 🔴 Live Demo
 
 Not live yet...
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Tinder clone app with React.
 
 ## Getting Started
 
