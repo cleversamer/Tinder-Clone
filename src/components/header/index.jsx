@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
-import { Person, Forum } from "@mui/icons-material";
+import { Forum } from "@mui/icons-material";
 
 import "./index.css";
 
-const Header = () => {
+const Header = ({ Icon }) => {
   return (
     <header className="header">
       <Link to="/">
         <IconButton>
-          <Person className="header__icon" fontSize="large" />
+          <Icon className="header__icon" fontSize="medium" />
         </IconButton>
       </Link>
 
@@ -22,7 +22,7 @@ const Header = () => {
 
       <Link to="/chat">
         <IconButton>
-          <Forum className="header__icon" fontSize="large" />
+          <Forum className="header__icon" fontSize="medium" />
         </IconButton>
       </Link>
     </header>

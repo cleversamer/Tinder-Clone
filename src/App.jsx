@@ -1,19 +1,17 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/home";
-import Chat from "./pages/chat/index";
+import Chats from "./pages/chats/index";
 import NotFound from "./pages/not-found";
-import Header from "./components/header";
 import "./css/app.css";
 
 const App = () => {
   return (
     <div className="app">
-      <Header />
-
       <Routes>
+        <Route path="/chat/:person" element={<Chats />} />
+        <Route path="/chat" element={<Chats />} />
         <Route path="/not-found" element={<NotFound />} />
-        <Route path="/chat" element={<Chat />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/not-found" replace />} />
       </Routes>
