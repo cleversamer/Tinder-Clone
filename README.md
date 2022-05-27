@@ -2,7 +2,7 @@
 
 ## 🔴 Live Demo
 
-Not live yet...
+[Click here...](https://samer-tinder.firebaseapp.com/)
 
 ## Description
 
@@ -15,6 +15,9 @@ Tinder clone app with React.
 - React
 - React DOM
 - React Router DOM
+- MaterialUI
+- MaterialUI Icons
+- Firebase
 
 ### Installing
 
