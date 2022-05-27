@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { onSnapshot } from "firebase/firestore";
+import { peopleRef } from "../../firebase";
 import TinderCard from "react-tinder-card";
 
 import "./index.css";
 
 const TinderCards = () => {
-  const [people, setPeople] = useState([
-    {
-      id: 1,
-      name: "Steve Jobs",
-      url: "https://avatars.githubusercontent.com/u/73291969?s=120&v=4",
-    },
-    {
-      id: 2,
-      name: "Mark Zuckerburg",
-      url: "https://avatars.githubusercontent.com/u/73291969?s=120&v=4",
-    },
-  ]);
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+    onSnapshot(peopleRef, (snapshot) => {
+      setPeople(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    });
+  }, []);
 
   return (
     <section className="tinder-cards">
