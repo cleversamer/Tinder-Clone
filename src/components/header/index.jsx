@@ -5,10 +5,10 @@ import { Forum } from "@mui/icons-material";
 
 import "./index.css";
 
-const Header = ({ Icon }) => {
+const Header = ({ Icon, path }) => {
   return (
     <header className="header">
-      <Link to="/">
+      <Link to={path}>
         <IconButton>
           <Icon className="header__icon" fontSize="medium" />
         </IconButton>

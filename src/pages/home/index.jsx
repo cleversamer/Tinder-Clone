@@ -9,7 +9,7 @@ import "./index.css";
 const Home = () => {
   return (
     <div className="home">
-      <Header Icon={Person} />
+      <Header Icon={Person} path="/" />
       <TinderCards />
       <SwipeButtons />
     </div>

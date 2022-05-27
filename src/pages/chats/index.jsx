@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import Chat from "../../components/chat";
 import { ArrowBackIos } from "@mui/icons-material";
@@ -32,9 +33,12 @@ const Chats = () => {
 
   return (
     <main className="chats">
-      <Header Icon={ArrowBackIos} />
+      <Header Icon={ArrowBackIos} path="/" />
+
       {chats.map((chat) => (
-        <Chat key={chat.id} chat={chat} />
+        <Link key={chat.id} to={`/chat/${chat.name}`}>
+          <Chat chat={chat} />
+        </Link>
       ))}
     </main>
   );
