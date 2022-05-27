@@ -9,9 +9,11 @@ const TinderCards = () => {
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
-    onSnapshot(peopleRef, (snapshot) => {
+    const unsubscribe = onSnapshot(peopleRef, (snapshot) => {
       setPeople(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
+
+    return unsubscribe;
   }, []);
 
   return (
