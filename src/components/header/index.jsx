@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import { Person, Forum } from "@mui/icons-material";
 
@@ -7,17 +8,23 @@ import "./index.css";
 const Header = () => {
   return (
     <header className="header">
-      <IconButton>
-        <Person className="header__icon" fontSize="large" />
-      </IconButton>
+      <Link to="/">
+        <IconButton>
+          <Person className="header__icon" fontSize="large" />
+        </IconButton>
+      </Link>
 
-      <IconButton>
-        <img className="header__logo" src="/img/logo.png" alt="Tinder" />
-      </IconButton>
+      <Link to="/">
+        <IconButton>
+          <img className="header__logo" src="/img/logo.png" alt="Tinder" />
+        </IconButton>
+      </Link>
 
-      <IconButton>
-        <Forum className="header__icon" fontSize="large" />
-      </IconButton>
+      <Link to="/chat">
+        <IconButton>
+          <Forum className="header__icon" fontSize="large" />
+        </IconButton>
+      </Link>
     </header>
   );
 };
